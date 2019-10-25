@@ -1,3 +1,10 @@
-<%= @cocktail.name %>
-<%= link_to "See all cocktail", cocktails_path %>
-<%= link_to "Add doses", new_cocktail_dose_path(@cocktail) %>
+<div class="card mb-3">
+  <img src="https://www.thespruceeats.com/thmb/AHWO_swapE-OzY_e3-Ufk2YAR2s=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/negroni-cocktail-recipe-759327-6-5b3f965b46e0fb00364f8d61.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @cocktail.name %></h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+</div>
+
+<%= link_to "See all cocktail", cocktails_path, class: 'btn btn-primary' %>
+<%= link_to "Add doses", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>

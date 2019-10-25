@@ -12,4 +12,12 @@ class DosesController < ApplicationController
     @dose.save
   end
 
+  def destroy
+    @dose = Dose.find(params[:id])
+    @dose.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to cocktails_path
+  end
+
 end
