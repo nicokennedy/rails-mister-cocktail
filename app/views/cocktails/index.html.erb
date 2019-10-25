@@ -18,7 +18,9 @@
       <div class="card-columns">
         <% @cocktails.each do |cocktail| %>
         <div class="card" style="width: 18rem;">
-          <img src="https://source.unsplash.com/230x160/?cocktails" class="card-img-top" alt="...">
+
+          <img src=" <%= cocktail.photo %> " class="card-img-top" alt="...">
+
             <div class="card-body">
               <%= link_to cocktail.name, cocktail_path(cocktail), class: 'btn btn-primary' %>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
